@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WattWave - Wireless EV Charging</title>
+    <title>WattWave - About Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="header">
+    <header class="header">
         <div class="logo">
-            <a href = "index.html">    
-            <img src="material\wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
+            <a href="index.html">
+                <img src="material/wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
             </a>
-            <!--<div class="logo-name">
-            <div><h1>WATTWAVE</h1></div>
-            <div><h3>YOU PARK WE CHARGE</h3></div>
-            </div>-->
         </div>
+
+<!-- Replace your current two hamburger buttons with this one: -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
     <section class="features">
         <h3>Why to choose Watt Wave</h3>
@@ -39,7 +42,6 @@
             <h2>for Electric Vehicles</h2>
             <p>WattWave combines innovative wireless technology with smart features to revolutionize how you charge your electric vehicle.</p>
         </div>
-        
         <div class="features-grid">
             <div class="feature">
                 <img src="material/features icon/efficiency.png" alt="Wireless Charging" class="feature-img">
@@ -54,15 +56,13 @@
             <div class="feature">
                 <img src="material/features icon/versatility.png" alt="Safety Guaranteed" class="feature-img">
                 <h4>Versatility</h4>
-                <p> Whether you're at home, at work, or on the go, our wireless chargers are designed to seamlessly integrate into your lifestyle, providing reliable power wherever you need it.</p>
+                <p>Whether you're at home, at work, or on the go, our wireless chargers are designed to seamlessly integrate into your lifestyle, providing reliable power wherever you need it.</p>
             </div>
             <div class="feature">
-                <img src="material/features icon/sustainability.png" alt="Safety Guaranteed" class="feature-img">
+                <img src="material/features icon/sustainability.png" alt="Sustainability" class="feature-img">
                 <h4>Sustainability</h4>
                 <p>By eliminating the need for traditional charging cables, Watt Wave is helping to reduce waste and minimize environmental impact, one charge at a time.</p>
             </div>
-
-            
         </div>
     </section>
 
@@ -90,12 +90,11 @@
                 <p>Advanced induction technology transfers energy wirelessly at rates comparable to or faster than traditional plug-in chargers.</p>
             </div>
         </div>
-
         <div class="charging-gif">
             <img src="material/wattwave gif.gif" alt="Description of the GIF" class="wattwave-gif">
         </div>
     </section>
-    
+
     <section class="faq">
         <h3>Frequently Asked Questions</h3>
         <div class="faq-items">
@@ -132,10 +131,9 @@
                 <h4>Are there any limitations to using wireless charging for electric vehicles?</h4>
                 <p>While wireless charging offers many benefits, it's important to note that there may be some limitations compared to traditional wired charging. For example, wireless charging systems may be less efficient over longer distances or when there are obstacles between the charging pad and the vehicle's receiver. Additionally, compatibility with specific makes and models of electric vehicles may vary.</p>
             </div>
-
         </div>
     </section>
-    
+
     <footer>
         <div class="footer-top">
             <div class="footer-logo">
@@ -144,7 +142,7 @@
                 <h3>Contact Us</h3>
                 <p>chinmaygoswami144@outlook.com</p>
                 <p>+91 7796106674</p>
-                <p>Visit Us: Ahemdabad, Gujarat</p>
+                <p>Visit Us: Ahmedabad, Gujarat</p>
                 <a href="https://www.linkedin.com/company/watt-wave/posts/?feedView=all">linkedin: Watt Wave</a>
             </div>
 
@@ -173,12 +171,38 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 WattWave. All rights reserved.</p>
-            <!--<div class="footer-policies">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a> -->
-            </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active'); // Changed 'active' to 'nav-active' for consistency with style.css
+                    hamburger.classList.toggle('toggle'); // Added 'toggle' class for hamburger animation
+                });
+
+                // Optional: Close nav when a link is clicked (useful for single-page apps or when navigating within the same page)
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navLinks.classList.contains('nav-active')) {
+                            navLinks.classList.remove('nav-active');
+                            hamburger.classList.remove('toggle');
+                        }
+                    });
+                });
+            }
+        });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('open');
+    });
+
+    </script>
 </body>
 </html>

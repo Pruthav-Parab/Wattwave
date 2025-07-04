@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script>
-  const video = document.getElementById("myVideo");
-  video.addEventListener("ended", () => {
-    video.pause();
-  });
-</script>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WattWave - Wireless EV Charging</title>
+    <title>WattWave - Products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="logo">
-            <a href = "index.html">    
-            <img src="material\wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
+            <a href="index.html">
+                <img src="material/wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
             </a>
-            <!--<div class="logo-name">
-            <div><h1>WATTWAVE</h1></div>
-            <div><h3>YOU PARK WE CHARGE</h3></div>
-            </div>-->
         </div>
+
+<!-- Replace your current two hamburger buttons with this one: -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
-    </div>
-    
+    </header>
+
     <section class="products">
         <h3>Our Solutions</h3>
         <div class="products-header">
@@ -68,21 +65,9 @@
                     <li>Remote monitoring and diagnostics</li>
                 </ul>
             </div>
-           <!-- <div class="product-card">
-                <img src="https://picsum.photos/300/200" alt="WattWave Station" class="product-img">
-                <h4>industrial Chargers</h4>
-                <p>High-capacity solution for public charging infrastructure.</p>
-                <ul>
-                    <li>Up to 50kW ultra-fast charging</li>
-                    <li>Multiple vehicle support</li>
-                    <li>Queue management system</li>
-                    <li>Integrated payment terminal</li>
-                    <li>24/7 support and monitoring</li>
-                </ul>
-            </div> -->
         </div>
     </section>
-    
+
     <footer>
         <div class="footer-top">
             <div class="footer-logo">
@@ -94,7 +79,6 @@
                 <p>Visit Us: Ahemdabad, Gujarat</p>
                 <a href="https://www.linkedin.com/company/watt-wave/posts/?feedView=all">linkedin: Watt Wave</a>
             </div>
-
             <div class="footer-links">
                 <div class="links-column">
                     <h4>Quick Links</h4>
@@ -120,12 +104,27 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 WattWave. All rights reserved.</p>
-            <!--<div class="footer-policies">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a> -->
-            </div>
         </div>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    });
+
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('open');
+    });
+
+    </script>
 </body>
 </html>

@@ -131,6 +131,7 @@ div{
     pointer-events: none; 
     align-items: center;
     background-color: #ffffff;
+    padding-top: 0px;
 }
 
 .hero-content h3 {
@@ -907,3 +908,219 @@ nav a:hover {
   line-height: 1;
 }
 
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  margin-right: 1.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #003366;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Show hamburger and hide nav on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    top: 70px; /* adjust as needed */
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+    gap: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: none;
+    padding: 1rem 2rem;
+    border-radius: 0 0 16px 16px;
+    z-index: 150;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-benefits {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .hero-benefits div {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+  .smallicon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h3 {
+    font-size: 2rem;         /* Reduce font size for mobile */
+    word-break: break-word;  /* Allow long words to break */
+    white-space: normal;     /* Ensure normal wrapping */
+    text-align: center;      /* Center text */
+    margin-top: 5rem;        /* Adjust margin as needed */
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content,.hero-background {
+    width: 100vw;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h3 {
+    font-size: 2rem;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger:hover span,
+.hamburger.open span {
+  background: #70c2d8; 
+}
+
+
+@media (max-width: 768px) {
+  .features{ 
+    padding-top: 30px;
+  }
+
+  .contact{ 
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-logo {
+    padding-left: 0;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+  }
+  .links-column {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .links-column ul {
+    padding-left: 0;
+  }
+  .links-column ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .links-column h4 {
+    text-align: center;
+    width: 100%;
+  }
+  .links-column ul {
+    text-align: center;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links-column ul li {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;      /* No background! */
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  margin-right: 1.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #003366;  /* Make sure this is a visible color */
+  border-radius: 2px;
+  transition: 0.3s;
+}

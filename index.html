@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script>
-  const video = document.getElementById("myVideo");
-  video.addEventListener("ended", () => {
-    video.pause();
-  });
-</script>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,68 +10,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <div class="logo">
-            <a href = "index.html">    
-            <img src="material\wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
+            <a href="index.html">
+                <img src="material/wattwave logo transparent backgorund.png" alt="WattWave Logo" class="logo-image">
             </a>
-            <!--<div class="logo-name">
-            <div><h1>WATTWAVE</h1></div>
-            <div><h3>YOU PARK WE CHARGE</h3></div>
-            </div>-->
         </div>
+
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
+
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about_us.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
-    </div>
-    
-    
-        <div class="hero-content" >
-            <video autoplay muted class="hero-background-video">
-                <source src="material\wattwave render scene.mp4" type="video/mp4" >
-            </video>
+    </header>
+
+    <main>
+        <section class="hero-content">
+            <div class="video-wrapper">
+                <video id="myVideo" autoplay muted loop playsinline class="hero-background-video">
+                    <source src="material/wattwave render scene.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="hero-background">
-            <h3>Wireless Charging for Electric Vehicles</h3>
-            <p>Experience the future of EV charging with our revolutionary wireless technology. Simply park your car and let WattWave do the rest – no cables, no hassle.</p>
+                <h3>Wireless Charging for Electric Vehicles</h3>
+                <p>Experience the future of EV charging with our revolutionary wireless technology. Simply park your car and let WattWave do the rest – no cables, no hassle.</p>
+                <div class="hero-benefits">
+                    <div class="fast-charging">
+                        <img src="material/fast charging.png" class="smallicon" alt="Fast Charging Icon">
+                        Fast Charging
+                    </div>
+                    <div class="fast-charging">
+                        <img src="material/all ev models.png" class="smallicon" alt="All EV Models Icon">
+                        All EV models
+                    </div>
+                    <div class="fast-charging">
+                        <img src="material/efficient charging.png" class="smallicon" alt="Energy Efficiency Icon">
+                        Energy efficiency
+                    </div>
+                </div>
+            </div>
+        </section>
 
-             <div class="hero-benefits">
-                <div class = 'fast-charging'> <img src="material/fast charging.png" class="smallicon"> Fast Charging</div>
-                <div class = 'fast-charging'> <img src="material/all ev models.png" class="smallicon"> All EV models</div>
-                <div class = 'fast-charging'> <img src="material/efficient charging.png" class="smallicon"> Energy efficiency</div>
-             </div>
+        <section class="mv-intro-section">
+            <h2 class="mv-intro-heading">MISSION AND VISION</h2>
+            <h3 class="mv-intro-subheading">Shaping the Future of Sustainable Transportation</h3>
+            <p class="mv-intro-description">
+                At WattWave, our mission is to lead the charge in creating innovative and eco-friendly wireless charging solutions. Our vision is to make clean energy adoption seamless by enabling smarter, more efficient electric vehicle infrastructure for a sustainable future.
+            </p>
+        </section>
 
-            </div>    
-        </div>
+        <section class="mv-section">
+            <div class="mv-box">
+                <img src="material/mission icon 1.png" alt="Mission Icon" class="mv-image" />
+                <h2>Our Mission</h2>
+                <p>Empower the transition to sustainable transportation by providing innovative, efficient, and convenient wireless charging solutions for electric vehicles, driving a cleaner and greener future.</p>
+            </div>
+            <div class="mv-box">
+                <img src="material/vision icon 1.png" alt="Vision Icon" class="mv-image" />
+                <h2>Our Vision</h2>
+                <p>To be the global leader in wireless charging technology, revolutionizing the way electric vehicles are powered and accelerating the adoption of sustainable transportation worldwide.</p>
+            </div>
+        </section>
+    </main>
 
-    
-    <section class="mv-intro-section">
-        <h2 class="mv-intro-heading">MISSION AND VISION</h2>
-        <h3 class="mv-intro-subheading">Shaping the Future of Sustainable Transportation</h3>
-        <p class="mv-intro-description">
-            At WattWave, our mission is to lead the charge in creating innovative and eco-friendly wireless charging solutions. Our vision is to make clean energy adoption seamless by enabling smarter, more efficient electric vehicle infrastructure for a sustainable future.
-        </p>
-    </section>
-
-   <section class="mv-section">
-        <div class="mv-box">
-            <img src="material/mission icon 1.png" alt="Mission Icon" class="mv-image" />
-            <h2>Our Mission</h2>
-            <p> Empower the transition to sustainable transportation by providing innovative, efficient, and convenient wireless charging solutions for electric vehicles, driving a cleaner and greener future.</p>
-        </div>
-
-        <div class="mv-box">
-            <img src="material/vision icon 1.png" alt="Vision Icon" class="mv-image" />
-            <h2>Our Vision</h2>
-            <p>To be the global leader in wireless charging technology, revolutionizing the way electric vehicles are powered and accelerating the adoption of sustainable transportation worldwide.</p>
-        </div>
-    </section>
-
-    
     <footer>
         <div class="footer-top">
             <div class="footer-logo">
@@ -88,41 +93,50 @@
                 <h3>Contact Us</h3>
                 <p>chinmaygoswami144@outlook.com</p>
                 <p>+91 7796106674</p>
-                <p>Visit Us: Ahemdabad, Gujarat</p>
-                <a href="https://www.linkedin.com/company/watt-wave/posts/?feedView=all">linkedin: Watt Wave</a>
+                <p>Visit Us: Ahmedabad, Gujarat</p>
+                <a href="https://www.linkedin.com/company/watt-wave/posts/?feedView=all">LinkedIn: Watt Wave</a>
             </div>
-
             <div class="footer-links">
                 <div class="links-column">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
                         <li><a href="#">Our Technology</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="links-column">
                     <h4>Social Media</h4>
                     <ul>
                         <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Phone number</a></li>
+                        <li><a href="https://www.linkedin.com/company/watt-wave/posts/?feedView=all">LinkedIn</a></li>
+                        <li><a href="mailto:chinmaygoswami144@outlook.com">Email</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="tel:+917796106674">Phone number</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 WattWave. All rights reserved.</p>
-            <!--<div class="footer-policies">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a> -->
-            </div>
         </div>
     </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('open');
+    });
+</script>
+
+
+
+
+    
+
 </body>
 </html>
